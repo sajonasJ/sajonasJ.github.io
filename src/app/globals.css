@@ -40,3 +40,20 @@ a {
     color-scheme: dark;
   }
 }
+
+.btn-custom:hover {
+  background-color: #0056b3 !important;
+  color: white !important;
+}
+
+section {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
