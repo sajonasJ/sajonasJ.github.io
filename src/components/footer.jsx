@@ -2,69 +2,33 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div style={styles.footer}>
-      <div style={styles.footerContent}>
-        <div>
-          <h3>Software Developer</h3>
-          <h4>Jonas Sajonas &copy; 2024</h4>
-        </div>
-        <div style={styles.links}>
+    <div className="container-fluid m-2">
+      <div className="container-fluidm m-0 p-0 d-flex flex-row justify-content-between">
+        <h5>Software Developer</h5>
+        <h6>Jonas Sajonas &copy; 2024</h6>
+      </div>
+      <div className="container-fluid d-flex m-0 p-0 flex-row justify-content-between">
+        <div className="d-flex m-0 flex-column">
           <span>
-            Email:{" "}
-            <a href="mailto:your-email@example.com" style={styles.link}>
-              your-email@example.com
-            </a>
-          </span>{" "}
-          |
+            Email:
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+          </span>
           <span>
-            GitHub:{" "}
-            <a href="https://github.com/your-github" style={styles.link}>
-              your-github
-            </a>
-          </span>{" "}
-          |
+            GitHub:
+            <a href="https://github.com/your-github">your-github</a>
+          </span>
           <span>
-            LinkedIn:{" "}
-            <a href="https://linkedin.com/in/your-linkedin" style={styles.link}>
-              your-linkedin
-            </a>
+            LinkedIn:
+            <a href="https://linkedin.com/in/your-linkedin">your-linkedin</a>
           </span>
         </div>
-        <div>Location: Your City, Your Country</div>
+        <div className="d-flex flex-column text-end">
+          <div>Gold Coast</div>
+          <div>Queensland, Australia</div>
+        </div>
       </div>
     </div>
   );
-};
-
-const styles = {
-  footer: {
-    backgroundColor: "#333",
-    color: "white",
-    // padding: '20px',
-    textAlign: "center",
-    position: "fixed",
-    bottom: 0,
-    width: "100%",
-    boxShadow: "0 -2px 10px rgba(0, 0, 0, 0.5)",
-  },
-  footerContent: {
-    maxWidth: "1200px",
-    margin: "0 auto",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: "10px",
-  },
-  links: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    gap: "15px",
-  },
-  link: {
-    color: "#1e90ff",
-    textDecoration: "none",
-  },
 };
 
 export default Footer;
