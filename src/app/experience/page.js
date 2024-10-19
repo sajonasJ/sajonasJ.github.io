@@ -6,7 +6,7 @@ const experiencePage = () => {
   return (
     <main>
       <Navigation />
-      <Section />
+      <section>Experience</section>
       <Footer />
     </main>
   )

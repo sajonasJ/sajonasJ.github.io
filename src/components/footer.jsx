@@ -7,19 +7,18 @@ const Footer = () => {
         <h5>Software Developer</h5>
         <h5>Jonas Sajonas &copy; 2024</h5>
       </div>
-      <div className="container-fluid d-flex m-0 p-0 flex-row justify-content-between">
+      <div className="container-fluid d-flex mb-3 p-0 flex-row justify-content-between">
         <div className="d-flex m-0 flex-column">
           <span>
-            Email:
-            <a href="mailto:your-email@example.com">your-email@example.com</a>
+            Email: jonas.sajonas@gmail.com
           </span>
           <span>
             GitHub:
-            <a href="https://github.com/your-github">your-github</a>
+            <a href="https://github.com/sajonasJ">https://github.com/sajonasJ</a>
           </span>
           <span>
             LinkedIn:
-            <a href="https://linkedin.com/in/your-linkedin">your-linkedin</a>
+            <a href="https://www.linkedin.com/in/sajonasj/">https://www.linkedin.com/in/sajonasj/</a>
           </span>
         </div>
         <div className="d-flex flex-column text-end me-2">

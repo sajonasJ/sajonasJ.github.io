@@ -6,7 +6,7 @@ const contactPage = () => {
   return (
     <main>
       <Navigation />
-      <Section />
+      <section>Contact</section>
       <Footer />
     </main>
   )

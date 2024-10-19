@@ -6,7 +6,7 @@ const educationPage = () => {
   return (
     <main>
       <Navigation />
-      <Section />
+      <section>Education</section>
       <Footer />
     </main>
   )
