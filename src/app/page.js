@@ -6,7 +6,27 @@ export default function Home() {
   return (
     <main>
       <Navigation />
-      <section>Home</section>
+      <section className="container-fluid d-flex flex-column justify-content-around">
+        <div>
+          <h1>Hi I'm Jonas</h1>
+          <p>Software Development Graduate</p>
+          <p>I do Web Development</p>
+          <p>I do Mobile App Development</p>
+          <p>I do Games Development</p>
+        </div>
+        <div>
+          <h3>Objective</h3>
+          <p>Learn as much from all kinds of software development</p>
+        </div>
+        <div>
+          <h3>Project Highlights</h3>
+          <p>Controls</p>
+          <p>Web Development</p>
+          <p>Software Development</p>
+          <p>Mobile Development</p>
+          <p>Game Development</p>
+        </div>
+      </section>
       <Footer />
     </main>
   );
