@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <div style={styles.header}>
-      Header is here
+      Jonas Sajonas
     </div>
   );
 };
