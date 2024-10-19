@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Header = () => {
+const Navigation = () => {
   return (
-    <div style={styles.header}>
-      Header is here
+    <div style={styles.nav}>
+      Nav is here
     </div>
   );
 };
 
 const styles = {
-  header: {
+  nav: {
     backgroundColor: '#1976d2',
     color: 'white',
     padding: '16px',
@@ -18,4 +18,4 @@ const styles = {
   },
 };
 
-export default Header;
+export default Navigation;

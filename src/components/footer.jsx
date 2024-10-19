@@ -1,9 +1,23 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <div>I am the foot</div>
-  )
-}
+    <div style={styles.footer}>
+      I am the foot
+    </div>
+  );
+};
 
-export default Footer
+const styles = {
+  footer: {
+    backgroundColor: '#333',
+    color: 'white',
+    padding: '20px',
+    textAlign: 'center',
+    position: 'fixed',
+    bottom: 0,
+    width: '100%',
+  },
+};
+
+export default Footer;
