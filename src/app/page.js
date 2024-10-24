@@ -8,7 +8,7 @@ export default function Home() {
       <Navigation />
       <section className="container-fluid d-flex flex-column justify-content-around">
         <div>
-          <h1>Hi I'm Jonas</h1>
+          <h1>Hi I&apos;m Jonas</h1>
           <p>Software Development Graduate</p>
           <p>I do Web Development</p>
           <p>I do Mobile App Development</p>
@@ -25,6 +25,12 @@ export default function Home() {
           <p>Software Development</p>
           <p>Mobile Development</p>
           <p>Game Development</p>
+        </div>
+        <div>
+          <h3>Awards / Certifications</h3>
+          <p>Griffith Academic Excellence 2024</p>
+          <p>Griffith Academic Excellence 2023</p>
+          <p>Griffith Academic Excellence 2022</p>
         </div>
       </section>
       <Footer />
