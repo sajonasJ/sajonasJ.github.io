@@ -51,7 +51,7 @@ section {
   color: #333;
   padding: 20px;
   text-align: center;
-  height: 100vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
