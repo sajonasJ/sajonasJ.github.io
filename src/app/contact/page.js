@@ -6,9 +6,9 @@ const contactPage = () => {
   return (
     <main>
       <Navigation />
-      <section className="container-fluid d-flex align-items-start">
+      <section className="container-fluid d-flex">
         <div className="d-flex flex-column align-items-start mt-5">
-          <h5 className="my-3">Contact:</h5>
+          <h2 className="my-3">Contact:</h2>
           <p>Email: sajonasj.work@gmail</p>
           <p>LinkedIn: https://www.linkedin.com/in/sajonasj/</p>
           <p>GitHub: https://github.com/sajonasJ</p>

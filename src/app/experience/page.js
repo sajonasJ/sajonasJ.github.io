@@ -6,9 +6,10 @@ const experiencePage = () => {
   return (
     <main>
       <Navigation />
-      <section className="container-fluid d-flex flex-column justify-content-around">
-        <div className="container-fluid d-flex mb-4">
-          <h1>Work Experience</h1>
+      <section className="container-fluid">
+        <div className="container-fluid d-flex mb-4 justify-content-between">
+          <h2>Work Experience</h2>
+          <div className="btn btn-sm btn-outline-primary">Sort</div>
         </div>
 
         <div className="d-flex container-fluid flex-column align-items-center mb-4">

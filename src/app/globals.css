@@ -53,7 +53,15 @@ section {
   text-align: center;
   min-height: 80vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+}
+
+.sub-section{
+  min-height:80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
