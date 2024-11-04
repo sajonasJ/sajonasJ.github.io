@@ -65,3 +65,13 @@ section {
   justify-content: center;
 }
 
+.card-head-left{
+  display: flex!important;
+  justify-content: flex-start!important;
+  align-items: center!important;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0!important;
+}

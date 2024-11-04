@@ -15,7 +15,7 @@ const educationPage = () => {
           <div className="d-flex container-fluid flex-column align-items-center mb-4">
             <h3 className="align-self-start mb-4">Software Development</h3>
             <div className="card w-100">
-              <div className="card-header d-flex">
+              <div className="card-header card-head-left">
                 <h4>Bachelor of Information, Communications and Technology</h4>
               </div>
               <div className="card-body d-flex flex-column text-start">
@@ -30,7 +30,7 @@ const educationPage = () => {
           <div className="d-flex container-fluid flex-column gap-3 align-items-center mb-4">
             <h3 className="align-self-start">Registered Nurse</h3>
             <div className="card w-100">
-              <div className="card-header d-flex">
+              <div className="card-header card-head-left">
                 <h4>Bachelor of Nursing</h4>
               </div>
               <div className="card-body d-flex flex-column text-start">
@@ -68,7 +68,7 @@ const educationPage = () => {
           <div className="d-flex container-fluid flex-column mb-4">
             <div className="card w-100">
               <div className="card-header d-flex">
-                <h5>Bachelor of Science in Nursing</h5>
+                <h5>Griffith Plus</h5>
               </div>
               <div className="card-body d-flex flex-column text-start">
                 <h6>Chinese General Hospital College of Nursing</h6>
