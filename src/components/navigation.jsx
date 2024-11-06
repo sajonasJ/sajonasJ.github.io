@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import { FaHome, FaFolderOpen, FaBriefcase, FaGraduationCap, FaPhoneAlt } from "react-icons/fa";
+
 
 const Navigation = () => {
   return (
@@ -7,21 +9,31 @@ const Navigation = () => {
       <div>
         <h1>Jonas Sajonas</h1>
       </div>
-      <div className="d-flex justify-content-end gap-1">
+      <div className="d-flex justify-content-end align-items-center gap-1">
         <Link href="/" passHref>
-          <span className="btn btn-sm  btn-custom">Home</span>
+          <span className="btn btn-sm  btn-custom">
+            <FaHome /> Home
+          </span>
         </Link>
         <Link href="/project" passHref>
-          <span className="btn btn-sm  btn-custom">Projects</span>
+          <span className="btn btn-sm  btn-custom">
+          <FaFolderOpen /> Projects
+            </span>
         </Link>
         <Link href="/experience" passHref>
-          <span className="btn btn-sm  btn-custom">Experience</span>
+          <span className="btn btn-sm  btn-custom">
+          <FaBriefcase /> Experience
+            </span>
         </Link>
         <Link href="/education" passHref>
-          <span className="btn btn-sm  btn-custom">Education</span>
+          <span className="btn btn-sm  btn-custom">
+          <FaGraduationCap /> Education
+          </span>
         </Link>
         <Link href="/contact" passHref>
-          <span className="btn btn-sm btn-custom">Contact</span>
+          <span className="btn btn-sm btn-custom">
+          <FaPhoneAlt /> Contact
+            </span>
         </Link>
       </div>
     </div>
