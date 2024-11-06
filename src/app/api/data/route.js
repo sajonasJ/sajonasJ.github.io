@@ -75,7 +75,7 @@ export async function POST(request) {
 export async function DELETE(request) {
   const section = request.nextUrl.searchParams.get("section") || "projects";
   const data = await initializeDB();
-  data[section] = []; // Clear the specified section
+  data[section] = [];
   
   await writeData(data);
   return NextResponse.json({ message: `All items in ${section} deleted!` }, { status: 200 });

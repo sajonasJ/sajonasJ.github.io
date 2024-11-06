@@ -20,8 +20,8 @@ const ContactPage = () => {
           if (!response.ok) throw new Error("Failed to fetch contact data");
           
           const data = await response.json();
-          setContact(data || {}); // Update state with fetched data
-          sessionStorage.setItem("contactData", JSON.stringify(data)); // Save to sessionStorage
+          setContact(data || {});
+          sessionStorage.setItem("contactData", JSON.stringify(data));
         } catch (error) {
           console.error("Error fetching contact data:", error);
         }

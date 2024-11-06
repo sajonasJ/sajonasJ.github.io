@@ -21,7 +21,7 @@ export default function Home() {
 
           const data = await response.json();
           setAbout(data);
-          sessionStorage.setItem("aboutData", JSON.stringify(data)); // Save to sessionStorage
+          sessionStorage.setItem("aboutData", JSON.stringify(data));
         } catch (error) {
           console.error("Error fetching about data:", error);
         }

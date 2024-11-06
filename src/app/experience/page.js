@@ -1,11 +1,11 @@
-"use client"; // Add this line to mark it as a Client Component
+"use client";
 
 import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
 
 const ExperiencePage = () => {
-  const [experience, setExperience] = useState([]); // State to hold fetched data
+  const [experience, setExperience] = useState([]);
 
   // Fetch experience data from sessionStorage or API on component mount
   useEffect(() => {
@@ -20,8 +20,8 @@ const ExperiencePage = () => {
           if (!response.ok) throw new Error("Network response was not ok");
 
           const data = await response.json();
-          setExperience(data); // Update state with fetched data
-          sessionStorage.setItem("experienceData", JSON.stringify(data)); // Save to sessionStorage
+          setExperience(data);
+          sessionStorage.setItem("experienceData", JSON.stringify(data));
         } catch (error) {
           console.error("Error fetching experience data:", error);
         }
@@ -40,7 +40,6 @@ const ExperiencePage = () => {
           <div className="btn btn-sm btn-outline-primary">Sort</div>
         </div>
 
-        {/* Dynamically render experience data */}
         <div className="d-flex container-fluid flex-column gap-3 align-items-center mb-4">
           {experience.map((job, index) => (
             <div key={index} className="card w-100 mb-3">

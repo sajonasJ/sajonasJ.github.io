@@ -24,12 +24,12 @@ const EducationPage = () => {
           const responseEdu = await fetch("/api/data?section=education");
           const dataEdu = await responseEdu.json();
           setEducation(dataEdu || []);
-          sessionStorage.setItem("educationData", JSON.stringify(dataEdu)); // Save to sessionStorage
+          sessionStorage.setItem("educationData", JSON.stringify(dataEdu));
 
           const responseCert = await fetch("/api/data?section=certifications");
           const dataCert = await responseCert.json();
           setCertifications(dataCert || []);
-          sessionStorage.setItem("certificationsData", JSON.stringify(dataCert)); // Save to sessionStorage
+          sessionStorage.setItem("certificationsData", JSON.stringify(dataCert));
         } catch (error) {
           console.error("Error fetching data:", error);
         }

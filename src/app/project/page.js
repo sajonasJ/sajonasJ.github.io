@@ -21,7 +21,7 @@ const ProjectPage = () => {
 
           const data = await response.json();
           setProjects(data); // Update state with fetched data
-          sessionStorage.setItem("projectsData", JSON.stringify(data)); // Save to sessionStorage
+          sessionStorage.setItem("projectsData", JSON.stringify(data));
         } catch (error) {
           console.error("Error fetching projects data:", error);
         }
