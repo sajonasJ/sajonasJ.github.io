@@ -20,7 +20,7 @@ const ProjectPage = () => {
           if (!response.ok) throw new Error("Network response was not ok");
 
           const data = await response.json();
-          setProjects(data); // Update state with fetched data
+          setProjects(data);
           sessionStorage.setItem("projectsData", JSON.stringify(data));
         } catch (error) {
           console.error("Error fetching projects data:", error);

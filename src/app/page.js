@@ -7,27 +7,41 @@ import Navigation from "@/components/navigation";
 export default function Home() {
   const [about, setAbout] = useState(null);
 
-  // Check sessionStorage first, then fetch from the server if necessary
   useEffect(() => {
-    const savedAboutData = sessionStorage.getItem("aboutData");
-
-    if (savedAboutData) {
-      setAbout(JSON.parse(savedAboutData));
-    } else {
-      const fetchAboutData = async () => {
+    const loadInitialData = async () => {
+      // Load 'about' data from sessionStorage or fetch it
+      const savedAboutData = sessionStorage.getItem("aboutData");
+      if (savedAboutData) {
+        setAbout(JSON.parse(savedAboutData));
+      } else {
         try {
           const response = await fetch("/api/data?section=about");
           if (!response.ok) throw new Error("Network response was not ok");
-
-          const data = await response.json();
-          setAbout(data);
-          sessionStorage.setItem("aboutData", JSON.stringify(data));
+          const aboutData = await response.json();
+          setAbout(aboutData);
+          sessionStorage.setItem("aboutData", JSON.stringify(aboutData));
         } catch (error) {
           console.error("Error fetching about data:", error);
         }
-      };
-      fetchAboutData();
-    }
+      }
+    };
+
+    const loadAdditionalData = async () => {
+      // Only fetch additional sections if not already saved in sessionStorage
+      const sections = ["projects", "experience", "education", "certifications", "contact"];
+      const fetches = sections.map(section => {
+        if (!sessionStorage.getItem(`${section}Data`)) {
+          return fetch(`/api/data?section=${section}`)
+            .then(res => res.json())
+            .then(data => sessionStorage.setItem(`${section}Data`, JSON.stringify(data)))
+            .catch(error => console.error(`Error fetching ${section} data:`, error));
+        }
+      });
+      await Promise.all(fetches);
+    };
+
+    loadInitialData();
+    loadAdditionalData();
   }, []);
 
   return (

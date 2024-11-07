@@ -18,7 +18,7 @@ const ContactPage = () => {
         try {
           const response = await fetch("/api/data?section=contact");
           if (!response.ok) throw new Error("Failed to fetch contact data");
-          
+
           const data = await response.json();
           setContact(data || {});
           sessionStorage.setItem("contactData", JSON.stringify(data));
@@ -41,7 +41,11 @@ const ContactPage = () => {
           <p>
             LinkedIn:{" "}
             {contact.linkedIn ? (
-              <a href={contact.linkedIn} target="_blank" rel="noopener noreferrer">
+              <a
+                href={contact.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {contact.linkedIn}
               </a>
             ) : (
@@ -51,7 +55,11 @@ const ContactPage = () => {
           <p>
             GitHub:{" "}
             {contact.github ? (
-              <a href={contact.github} target="_blank" rel="noopener noreferrer">
+              <a
+                href={contact.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {contact.github}
               </a>
             ) : (
@@ -59,7 +67,10 @@ const ContactPage = () => {
             )}
           </p>
           <p>
-            Send a Message: <button type="button" className="btn btn-primary">Button</button>
+            Send a Message:{" "}
+            <button type="button" className="btn btn-primary">
+              Button
+            </button>
           </p>
         </div>
       </section>
