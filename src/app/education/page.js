@@ -1,43 +1,42 @@
 "use client";
-
+"use strict";
 import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
+import Loading from "@/components/loading"; // Import the Loading component
+import { loadInitialData, loadAdditionalData } from "@/services/dataService";
 
 const EducationPage = () => {
   const [education, setEducation] = useState([]);
   const [certifications, setCertifications] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
-    // Check sessionStorage for existing data
-    const savedEducationData = sessionStorage.getItem("educationData");
-    const savedCertificationsData = sessionStorage.getItem("certificationsData");
+    const initializePageData = async () => {
+      // Load initial 'education' and 'certifications' data
+      const educationData = await loadInitialData("education");
+      const certificationsData = await loadInitialData("certifications");
 
-    if (savedEducationData && savedCertificationsData) {
-      // If data exists in sessionStorage, use it
-      setEducation(JSON.parse(savedEducationData));
-      setCertifications(JSON.parse(savedCertificationsData));
-    } else {
-      // Fetch data from the API if not in sessionStorage
-      const fetchEducationData = async () => {
-        try {
-          const responseEdu = await fetch("/api/data?section=education");
-          const dataEdu = await responseEdu.json();
-          setEducation(dataEdu || []);
-          sessionStorage.setItem("educationData", JSON.stringify(dataEdu));
+      setEducation(educationData);
+      setCertifications(certificationsData);
+      setLoading(false); // Stop loading after fetching initial data
 
-          const responseCert = await fetch("/api/data?section=certifications");
-          const dataCert = await responseCert.json();
-          setCertifications(dataCert || []);
-          sessionStorage.setItem("certificationsData", JSON.stringify(dataCert));
-        } catch (error) {
-          console.error("Error fetching data:", error);
-        }
-      };
+      // Load additional sections in the background
+      loadAdditionalData(["projects", "experience", "contact", "about"]);
+    };
 
-      fetchEducationData();
-    }
+    initializePageData();
   }, []);
+
+  // Show loading component while initial data is being fetched
+  if (loading) {
+    return (
+      <main>
+        <Navigation />
+        <Loading /> {/* Display Loading component here */}
+      </main>
+    );
+  }
 
   return (
     <main>

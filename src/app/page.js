@@ -1,49 +1,40 @@
 "use client";
-
+"use strict";
 import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
+import Loading from "@/components/loading"; // Import the Loading component
+import { loadInitialData, loadAdditionalData } from "@/services/dataService";
 
 export default function Home() {
   const [about, setAbout] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadInitialData = async () => {
-      // Load 'about' data from sessionStorage or fetch it
-      const savedAboutData = sessionStorage.getItem("aboutData");
-      if (savedAboutData) {
-        setAbout(JSON.parse(savedAboutData));
-      } else {
-        try {
-          const response = await fetch("/api/data?section=about");
-          if (!response.ok) throw new Error("Network response was not ok");
-          const aboutData = await response.json();
-          setAbout(aboutData);
-          sessionStorage.setItem("aboutData", JSON.stringify(aboutData));
-        } catch (error) {
-          console.error("Error fetching about data:", error);
-        }
-      }
+    const initializePageData = async () => {
+      // Load initial 'about' section data and set the loading state
+      const aboutData = await loadInitialData("about");
+      setAbout(aboutData);
+      setLoading(false); // Stop loading after fetching 'about' data
+
+      // Load additional sections in the background
+      loadAdditionalData(["projects", "experience", "education", "certifications", "contact"]);
     };
 
-    const loadAdditionalData = async () => {
-      // Only fetch additional sections if not already saved in sessionStorage
-      const sections = ["projects", "experience", "education", "certifications", "contact"];
-      const fetches = sections.map(section => {
-        if (!sessionStorage.getItem(`${section}Data`)) {
-          return fetch(`/api/data?section=${section}`)
-            .then(res => res.json())
-            .then(data => sessionStorage.setItem(`${section}Data`, JSON.stringify(data)))
-            .catch(error => console.error(`Error fetching ${section} data:`, error));
-        }
-      });
-      await Promise.all(fetches);
-    };
-
-    loadInitialData();
-    loadAdditionalData();
+    initializePageData();
   }, []);
 
+  // Display the Loading component while the 'about' data is still loading
+  if (loading) {
+    return (
+      <main>
+        <Navigation />
+        <Loading />
+      </main>
+    );
+  }
+
+  // Main content after loading is complete
   return (
     <main>
       <Navigation />

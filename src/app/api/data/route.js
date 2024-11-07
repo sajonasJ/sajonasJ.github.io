@@ -1,4 +1,5 @@
 // app/api/data/route.js
+"use strict";
 import path from 'path';
 import fs from 'fs/promises';
 import { NextResponse } from 'next/server';

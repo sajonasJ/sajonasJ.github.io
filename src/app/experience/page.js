@@ -1,35 +1,38 @@
 "use client";
-
+"use strict";
 import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
+import Loading from "@/components/loading";
+import { loadInitialData, loadAdditionalData } from "@/services/dataService";
 
 const ExperiencePage = () => {
   const [experience, setExperience] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
-  // Fetch experience data from sessionStorage or API on component mount
   useEffect(() => {
-    const savedExperienceData = sessionStorage.getItem("experienceData");
+    const initializePageData = async () => {
+      // Load initial 'experience' data and set the loading state
+      const experienceData = await loadInitialData("experience");
+      setExperience(experienceData);
+      setLoading(false); // Stop loading after fetching 'experience' data
 
-    if (savedExperienceData) {
-      setExperience(JSON.parse(savedExperienceData));
-    } else {
-      const fetchExperience = async () => {
-        try {
-          const response = await fetch("/api/data?section=experience");
-          if (!response.ok) throw new Error("Network response was not ok");
+      // Load additional sections in the background
+      loadAdditionalData(["projects", "education", "certifications", "contact", "about"]);
+    };
 
-          const data = await response.json();
-          setExperience(data);
-          sessionStorage.setItem("experienceData", JSON.stringify(data));
-        } catch (error) {
-          console.error("Error fetching experience data:", error);
-        }
-      };
-
-      fetchExperience();
-    }
+    initializePageData();
   }, []);
+
+  // Show loading component while data is being fetched
+  if (loading) {
+    return (
+      <main>
+        <Navigation />
+        <Loading />
+      </main>
+    );
+  }
 
   return (
     <main>

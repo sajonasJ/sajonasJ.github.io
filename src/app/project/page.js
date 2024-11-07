@@ -1,35 +1,33 @@
-"use client"; // Ensures this is a client component
-
+"use client";
+"use strict";
 import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
+import Loading from "@/components/loading"; 
+import { loadInitialData } from "@/services/dataService";
 
 const ProjectPage = () => {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Fetch projects data from sessionStorage or API
   useEffect(() => {
-    const savedProjectsData = sessionStorage.getItem("projectsData");
+    const initializeProjects = async () => {
+      const data = await loadInitialData("projects");
+      setProjects(data || []);
+      setLoading(false);
+    };
 
-    if (savedProjectsData) {
-      setProjects(JSON.parse(savedProjectsData));
-    } else {
-      const fetchProjectsData = async () => {
-        try {
-          const response = await fetch("/api/data?section=projects");
-          if (!response.ok) throw new Error("Network response was not ok");
-
-          const data = await response.json();
-          setProjects(data);
-          sessionStorage.setItem("projectsData", JSON.stringify(data));
-        } catch (error) {
-          console.error("Error fetching projects data:", error);
-        }
-      };
-
-      fetchProjectsData();
-    }
+    initializeProjects();
   }, []);
+
+  if (loading) {
+    return (
+      <main>
+        <Navigation />
+        <Loading />
+      </main>
+    );
+  }
 
   return (
     <main>

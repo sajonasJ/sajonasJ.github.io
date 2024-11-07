@@ -1,7 +1,13 @@
+"use strict";
 import React from "react";
 import Link from "next/link";
-import { FaHome, FaFolderOpen, FaBriefcase, FaGraduationCap, FaPhoneAlt } from "react-icons/fa";
-
+import {
+  FaHome,
+  FaFolderOpen,
+  FaBriefcase,
+  FaGraduationCap,
+  FaPhoneAlt,
+} from "react-icons/fa";
 
 const Navigation = () => {
   return (
@@ -17,23 +23,23 @@ const Navigation = () => {
         </Link>
         <Link href="/project" passHref>
           <span className="btn btn-sm  btn-custom">
-          <FaFolderOpen /> Projects
-            </span>
+            <FaFolderOpen /> Projects
+          </span>
         </Link>
         <Link href="/experience" passHref>
           <span className="btn btn-sm  btn-custom">
-          <FaBriefcase /> Experience
-            </span>
+            <FaBriefcase /> Experience
+          </span>
         </Link>
         <Link href="/education" passHref>
           <span className="btn btn-sm  btn-custom">
-          <FaGraduationCap /> Education
+            <FaGraduationCap /> Education
           </span>
         </Link>
         <Link href="/contact" passHref>
           <span className="btn btn-sm btn-custom">
-          <FaPhoneAlt /> Contact
-            </span>
+            <FaPhoneAlt /> Contact
+          </span>
         </Link>
       </div>
     </div>

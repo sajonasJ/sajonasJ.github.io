@@ -1,35 +1,38 @@
 "use client";
-
+"use strict";
 import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
+import Loading from "@/components/loading";
+import { loadInitialData, loadAdditionalData } from "@/services/dataService";
 
 const ContactPage = () => {
   const [contact, setContact] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  // Fetch contact data from sessionStorage or API
   useEffect(() => {
-    const savedContactData = sessionStorage.getItem("contactData");
+    const initializePageData = async () => {
+      // Load initial 'contact' data
+      const contactData = await loadInitialData("contact");
+      setContact(contactData);
+      setLoading(false);
 
-    if (savedContactData) {
-      setContact(JSON.parse(savedContactData));
-    } else {
-      const fetchContactData = async () => {
-        try {
-          const response = await fetch("/api/data?section=contact");
-          if (!response.ok) throw new Error("Failed to fetch contact data");
+      // Load additional sections in the background
+      loadAdditionalData(["projects", "experience", "education", "certifications", "about"]);
+    };
 
-          const data = await response.json();
-          setContact(data || {});
-          sessionStorage.setItem("contactData", JSON.stringify(data));
-        } catch (error) {
-          console.error("Error fetching contact data:", error);
-        }
-      };
-
-      fetchContactData();
-    }
+    initializePageData();
   }, []);
+
+  // Show loading component while initial data is being fetched
+  if (loading) {
+    return (
+      <main>
+        <Navigation />
+        <Loading />
+      </main>
+    );
+  }
 
   return (
     <main>
