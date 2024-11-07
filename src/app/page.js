@@ -1,9 +1,10 @@
 "use client";
-"use strict";
+
 import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
-import Loading from "@/components/loading"; // Import the Loading component
+import Loading from "@/components/loading";
+import Image from "next/image";
 import { loadInitialData, loadAdditionalData } from "@/services/dataService";
 
 export default function Home() {
@@ -12,19 +13,22 @@ export default function Home() {
 
   useEffect(() => {
     const initializePageData = async () => {
-      // Load initial 'about' section data and set the loading state
       const aboutData = await loadInitialData("about");
       setAbout(aboutData);
-      setLoading(false); // Stop loading after fetching 'about' data
+      setLoading(false);
 
-      // Load additional sections in the background
-      loadAdditionalData(["projects", "experience", "education", "certifications", "contact"]);
+      loadAdditionalData([
+        "projects",
+        "experience",
+        "education",
+        "certifications",
+        "contact",
+      ]);
     };
 
     initializePageData();
   }, []);
 
-  // Display the Loading component while the 'about' data is still loading
   if (loading) {
     return (
       <main>
@@ -34,7 +38,6 @@ export default function Home() {
     );
   }
 
-  // Main content after loading is complete
   return (
     <main>
       <Navigation />
@@ -46,16 +49,99 @@ export default function Home() {
           <p>I do Mobile App Development</p>
           <p>I do Games Development</p>
         </div>
+
         <div className="sub-section">
           <h3>Career Objective</h3>
-          <p>{about?.careerObjective || "Learn as much from all kinds of software development"}</p>
+          <p>
+            {about?.careerObjective ||
+              "Learn as much from all kinds of software development"}
+          </p>
         </div>
+
         <div className="sub-section">
           <h3>Project Highlights</h3>
           {about?.projectHighlights?.map((highlight, index) => (
             <p key={index}>{highlight}</p>
           ))}
         </div>
+
+        <div className="sub-section" id="skills">
+          <h3>Skills</h3>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+            {[
+              {
+                name: "HTML",
+                imgSrc:
+                  "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+                experience: "3 years",
+              },
+              {
+                name: "JavaScript",
+                imgSrc:
+                  "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg",
+                experience: "2.5 years",
+              },
+              {
+                name: "CSS",
+                imgSrc:
+                  "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+                experience: "3 years",
+              },
+              {
+                name: "Python",
+                imgSrc:
+                  "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+                experience: "1 year",
+              },
+              {
+                name: "C#",
+                imgSrc:
+                  "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+                experience: "1 year",
+              },
+              {
+                name: "React",
+                imgSrc:
+                  "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+                experience: "1 year",
+              },
+              {
+                name: "PHP",
+                imgSrc:
+                  "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
+                experience: "2 years",
+              },
+              {
+                name: "Angular",
+                imgSrc:
+                  "https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg",
+                experience: "1 year",
+              },
+            ].map((skill, index) => (
+              <div
+                key={index}
+                style={{
+                  textAlign: "center",
+                  width: "120px",
+                  border: "1px solid #ddd",
+                  borderRadius: "8px",
+                  padding: "1rem",
+                }}
+              >
+                <Image
+                  src={skill.imgSrc}
+                  alt={`${skill.name} Logo`}
+                  width={50}
+                  height={50}
+                />{" "}
+                {/* Optimized Image */}
+                <h6 style={{ marginTop: "0.5rem" }}>{skill.name}</h6>
+                <p>{skill.experience} experience</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="sub-section">
           <h3>Awards</h3>
           {about?.awards?.map((award, index) => (
