@@ -7,6 +7,40 @@ import Loading from "@/components/loading";
 import Image from "next/image";
 import { loadInitialData, loadAdditionalData } from "@/services/dataService";
 
+// Import images from the local images folder
+import Anaconda from '../images/Anaconda.png';
+import Angular from '../images/Angular.png';
+import Apache from '../images/Apache.png';
+import AWS from '../images/AWS.png';
+import Bootstrap from '../images/Bootstrap.png';
+import Confluence from '../images/Confluence.png';
+import CSharp from '../images/CSharp.png';
+import CSS from '../images/CSS.png';
+import Docker from '../images/Docker.png';
+import DockerCompose from '../images/DockerCompose.jpeg';
+import HomeAssistant from '../images/HomeAssistant.png';
+import HTML from '../images/HTML.png';
+import JavaScript from '../images/JavaScript.png';
+import Jira from '../images/Jira.png';
+import Kubernetes from '../images/Kubernetes.svg';
+import Laravel from '../images/Laravel.svg';
+import Linux from '../images/Linux.jpg';
+import MongoDB from '../images/MongoDB.png';
+import MySQL from '../images/MySQL.png';
+import NextJS from '../images/NextJS.png';
+import NodeJS from '../images/NodeJS.svg';
+import PHP from '../images/PHP.png';
+import Python from '../images/Python.png';
+import ReactLogo from '../images/React.png';
+import ReduxSaga from '../images/Redux-Saga.svg';
+import Redux from '../images/Redux.png';
+import Sass from '../images/Sass.png';
+import SQL from '../images/SQL.png';
+import TypeScript from '../images/TypeScript.png';
+import Unity from '../images/Unity.png';
+import VSCode from '../images/VSCode.png';
+import XCode from '../images/XCode.png';
+
 export default function Home() {
   const [about, setAbout] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -38,6 +72,45 @@ export default function Home() {
     );
   }
 
+  // Define default skills array with experience set to "1 year" if not specified
+  const skills = [
+    { name: "Anaconda", imgSrc: Anaconda, experience: "2 years" },
+    { name: "Angular", imgSrc: Angular, experience: "1 year" },
+    { name: "Apache", imgSrc: Apache },
+    { name: "AWS", imgSrc: AWS, experience: "2 years" },
+    { name: "Bootstrap", imgSrc: Bootstrap, experience: "3 years" },
+    { name: "Confluence", imgSrc: Confluence },
+    { name: "C#", imgSrc: CSharp, experience: "2 years" },
+    { name: "CSS", imgSrc: CSS, experience: "3 years" },
+    { name: "Docker", imgSrc: Docker, experience: "1.5 years" },
+    { name: "Docker Compose", imgSrc: DockerCompose },
+    { name: "Home Assistant", imgSrc: HomeAssistant, experience: "6 months" },
+    { name: "HTML", imgSrc: HTML, experience: "3 years" },
+    { name: "JavaScript", imgSrc: JavaScript, experience: "2.5 years" },
+    { name: "Jira", imgSrc: Jira },
+    { name: "Kubernetes", imgSrc: Kubernetes, experience: "1 year" },
+    { name: "Laravel", imgSrc: Laravel },
+    { name: "Linux", imgSrc: Linux },
+    { name: "MongoDB", imgSrc: MongoDB },
+    { name: "MySQL", imgSrc: MySQL },
+    { name: "Next.js", imgSrc: NextJS },
+    { name: "Node.js", imgSrc: NodeJS },
+    { name: "PHP", imgSrc: PHP },
+    { name: "Python", imgSrc: Python, experience: "2 years" },
+    { name: "React", imgSrc: ReactLogo },
+    { name: "Redux Saga", imgSrc: ReduxSaga },
+    { name: "Redux", imgSrc: Redux },
+    { name: "Sass", imgSrc: Sass },
+    { name: "SQL", imgSrc: SQL },
+    { name: "TypeScript", imgSrc: TypeScript },
+    { name: "Unity", imgSrc: Unity },
+    { name: "VSCode", imgSrc: VSCode },
+    { name: "XCode", imgSrc: XCode },
+  ].map(skill => ({
+    ...skill,
+    experience: skill.experience || "1 year", // Set default experience if not provided
+  }));
+
   return (
     <main>
       <Navigation />
@@ -66,81 +139,33 @@ export default function Home() {
         </div>
 
         <div className="sub-section" id="skills">
-          <h3>Skills</h3>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-            {[
-              {
-                name: "HTML",
-                imgSrc:
-                  "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
-                experience: "3 years",
-              },
-              {
-                name: "JavaScript",
-                imgSrc:
-                  "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg",
-                experience: "2.5 years",
-              },
-              {
-                name: "CSS",
-                imgSrc:
-                  "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-                experience: "3 years",
-              },
-              {
-                name: "Python",
-                imgSrc:
-                  "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-                experience: "1 year",
-              },
-              {
-                name: "C#",
-                imgSrc:
-                  "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
-                experience: "1 year",
-              },
-              {
-                name: "React",
-                imgSrc:
-                  "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-                experience: "1 year",
-              },
-              {
-                name: "PHP",
-                imgSrc:
-                  "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
-                experience: "2 years",
-              },
-              {
-                name: "Angular",
-                imgSrc:
-                  "https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg",
-                experience: "1 year",
-              },
-            ].map((skill, index) => (
-              <div
-                key={index}
-                style={{
-                  textAlign: "center",
-                  width: "120px",
-                  border: "1px solid #ddd",
-                  borderRadius: "8px",
-                  padding: "1rem",
-                }}
-              >
-                <Image
-                  src={skill.imgSrc}
-                  alt={`${skill.name} Logo`}
-                  width={50}
-                  height={50}
-                />{" "}
-                {/* Optimized Image */}
-                <h6 style={{ marginTop: "0.5rem" }}>{skill.name}</h6>
-                <p>{skill.experience} experience</p>
-              </div>
-            ))}
-          </div>
-        </div>
+  <h3>Skills</h3>
+  <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+    {skills.map((skill, index) => (
+      <div
+        key={index}
+        style={{
+          textAlign: "center",
+          width: "120px",
+          border: "1px solid #ddd",
+          borderRadius: "8px",
+          padding: "1rem",
+        }}
+      >
+        <Image
+          src={skill.imgSrc}
+          alt={`${skill.name} Logo`}
+          width={50}
+          height={50}
+          style={{ objectFit: "contain" }} // Ensures the image fits within the bounds without stretching
+        />
+        <h6 style={{ marginTop: "0.5rem" }}>{skill.name}</h6>
+        <p>{skill.experience} experience</p>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         <div className="sub-section">
           <h3>Awards</h3>
