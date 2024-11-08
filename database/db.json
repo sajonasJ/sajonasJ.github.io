@@ -43,12 +43,7 @@
       "category": "University",
       "role": "Full-stack",
       "type": "Web Development",
-      "techStack": [
-        "HTML5/CSS",
-        "PHP",
-        "Laravel",
-        "SQLite"
-      ],
+      "techStack": ["HTML5/CSS", "PHP", "Laravel", "SQLite"],
       "description": [
         "Developed a peer review platform for university courses with user registration and CRUD functionality.",
         "Utilized SQLite3 with Laravel for database management, routing, and authentication.",
@@ -60,12 +55,7 @@
       "category": "University",
       "role": "Full-stack",
       "type": "Web Development",
-      "techStack": [
-        "HTML5/CSS",
-        "PHP",
-        "Laravel",
-        "MySQL"
-      ],
+      "techStack": ["HTML5/CSS", "PHP", "Laravel", "MySQL"],
       "description": [
         "Built a game review website with CRUD functionality for game reviews.",
         "Used SQLite3 for data management and Laravel for routing and authentication."
@@ -76,12 +66,7 @@
       "category": "University",
       "role": "Front-End",
       "type": "Mobile App Development",
-      "techStack": [
-        "HTML5/CSS3",
-        "JavaScript",
-        "React-Native",
-        "Expo Go"
-      ],
+      "techStack": ["HTML5/CSS3", "JavaScript", "React-Native", "Expo Go"],
       "description": [
         "Developed a mobile store application with CRUD functionalities for products.",
         "Built using React Native and Expo Go for cross-platform performance on iOS and Android."
@@ -92,12 +77,7 @@
       "category": "University",
       "role": "Front-End",
       "type": "Web Development",
-      "techStack": [
-        "JavaScript",
-        "React",
-        "RESTful APIs",
-        "HTML5/CSS3"
-      ],
+      "techStack": ["JavaScript", "React", "RESTful APIs", "HTML5/CSS3"],
       "description": [
         "Developed a React-based web aggregator that integrates YouTube, Spotify, Pexels, and Flickr APIs to provide multimedia content."
       ]
@@ -107,11 +87,7 @@
       "category": "University",
       "role": "Back-end",
       "type": "Web Development",
-      "techStack": [
-        "AWS EC2",
-        "Express.Js",
-        "Nginx"
-      ],
+      "techStack": ["AWS EC2", "Express.Js", "Nginx"],
       "description": [
         "Deployed a web application on AWS EC2 using Docker, Docker-Compose, and Kubernetes for scalable server management.",
         "Integrated MongoDB with a graphical interface and set up an Nginx reverse proxy."
@@ -225,6 +201,12 @@
   "about": {
     "name": "Jonas",
     "title": "Software Development Graduate",
+    "recommendations": [
+      {
+        "name": "Griffith University Recommendation",
+        "file": "images/Recommend.pdf"
+      }
+    ],
     "careerObjective": "Learn as much from all kinds of software development",
     "projectHighlights": [
       "Web Development",
@@ -233,9 +215,24 @@
       "Game Development"
     ],
     "awards": [
-      "Griffith Academic Excellence 2024",
-      "Griffith Academic Excellence 2023",
-      "Griffith Academic Excellence 2022"
+      {
+        "name": "Griffith Academic Excellence 2024",
+        "imgSrc": "/images/gaward2024.png",
+        "issuedBy": "Griffith University",
+        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit."
+      },
+      {
+        "name": "Griffith Academic Excellence 2023",
+        "imgSrc": "/images/gaward2023.png",
+        "issuedBy": "Griffith University",
+        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit."
+      },
+      {
+        "name": "Griffith Academic Excellence 2022",
+        "imgSrc": "/images/gaward2022.png",
+        "issuedBy": "Griffith University",
+        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit."
+      }
     ],
     "skills": [
       {

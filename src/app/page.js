@@ -75,7 +75,7 @@ export default function Home() {
         </div>
 
         <div className="sub-section" id="skills">
-          <h2>Skills</h2>
+          <h2>Technical Skills and Tools</h2>
           <div className="skillContainer ">
             {about?.skills?.map((skill, index) => (
               <div className="skillImg" key={index}>
@@ -95,12 +95,39 @@ export default function Home() {
 
         <div className="sub-section">
           <h2>Awards</h2>
-          {about?.awards?.map((award, index) => (
-            <p key={index}>{award}</p>
-          ))}
+          <div className="awards-container">
+            {about?.awards?.map((award, index) => (
+              <div key={index} className="award-item">
+                <div className="d-flex flex-row mb-2 justify-content-between align-items-center gap-2">
+                  <Image
+                    src={award.imgSrc}
+                    alt={`${award.name} Badge`}
+                    width={100}
+                    height={100}
+                    className="award-badge"
+                  />
+                  <div>
+                  <h5 className="award-name">{award.name}</h5>
+                  <p className="award-issued-by">Issued by: {award.issuedBy}</p>
+                  </div>
+
+                </div>
+                <div className="text-start ps-4">
+                  <p className="award-description">{award.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
         <div className="sub-section">
           <h2>Recommendations</h2>
+          <Image
+                    src={recommendation.imgSrc}
+                    alt={`${award.name} Badge`}
+                    width={100}
+                    height={100}
+                  />
         </div>
       </section>
       <Footer />
