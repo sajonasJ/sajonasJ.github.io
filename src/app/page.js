@@ -44,7 +44,7 @@ export default function Home() {
     <main>
       <Navigation />
       <section className="container-fluid d-flex flex-column justify-content-around">
-        <div className="sub-section box-center flex-row">
+        <div className="sub-section box-center px-5 flex-row">
           <div className="container box-center flex-column">
             <h1>Hi I&apos;m {about?.name || "Jonas"}</h1>
             <h5>Software Developer</h5>
@@ -52,18 +52,34 @@ export default function Home() {
             <h5>Registered Nurse</h5>
           </div>
           <div className="container">
-            <p>{about?.title || "Software Development Graduate"}</p>
-            <p>I do Web Development</p>
-            <p>I do Mobile App Development</p>
-            <p>I do Games Development</p>
+            <p>
+              I&apos;m a recent graduate in Software Development from Griffith
+              University, with a unique background as a registered nurse with
+              over a decade of experience in the operating theatre. My passion
+              for technology and desire to create solutions brought me to pursue
+              a career in software development. As a versatile developer, I have
+              experience across web development (front-end and back-end), mobile
+              development, and software applications, and I&apos;ve even
+              explored game development. I&apos;m driven by a commitment to
+              delivering high-quality results, and I&apos;m a highly
+              results-oriented individual who thrives on challenges. I&apos;m
+              excited about new opportunities to leverage my diverse skills,
+              contribute to innovative projects, and continue growing alongside
+              my team.
+            </p>
           </div>
         </div>
 
-        <div className="sub-section">
+        <div className="container w-50">
           <h2>Career Objective</h2>
           <p>
-            {about?.careerObjective ||
-              "Learn as much from all kinds of software development"}
+            My goal is to become an expert in software engineering, enabling me
+            to apply my skills across diverse scenarios and fields. I’m
+            committed to a structured approach to growth—focusing deeply on one
+            area until I master it, and then moving on to tackle the next
+            challenge. This step-by-step progression not only fuels my passion
+            for continuous learning but also allows me to build a versatile
+            skill set to solve complex problems in various contexts.
           </p>
         </div>
 
@@ -74,7 +90,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="sub-section" id="skills">
+        <div className="sub-section " id="skills">
           <h2>Technical Skills and Tools</h2>
           <div className="skillContainer ">
             {about?.skills?.map((skill, index) => (
@@ -128,7 +144,7 @@ export default function Home() {
             href="/images/Recommend.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="d-flex align-items-center justify-content-center gap-1"
+            className="d-flex align-items-center text-decoration-none text-reset justify-content-center mt-3 gap-1"
           >
             Griffith University Recommendation
             <Image
