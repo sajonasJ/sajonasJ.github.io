@@ -60,7 +60,7 @@ const ProjectPage = () => {
               ))}
           </div>
         </div>
-
+        <hr className="custom-separator" />
         <div className="d-flex w-100 flex-column">
           <div className="container-fluid d-flex mb-2">
             <h2>University</h2>

@@ -55,19 +55,19 @@ export default function Home() {
             <p>{about?.intro}</p>
           </div>
         </div>
-
-        <div className="container w-50">
+        <hr className="custom-separator" />
+        <div className="sub-section">
           <h2>Career Objective</h2>
           <p>{about?.objective}</p>
         </div>
-
+        <hr className="custom-separator" />
         <div className="sub-section">
           <h2>Project Highlights</h2>
           {about?.projectHighlights?.map((highlight, index) => (
             <p key={index}>{highlight}</p>
           ))}
         </div>
-
+        <hr className="custom-separator" />
         <div className="sub-section " id="skills">
           <h2>Technical Skills and Tools</h2>
           <div className="skillContainer ">
@@ -86,7 +86,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-
+        <hr className="custom-separator" />
         <div className="sub-section">
           <h2>Awards</h2>
           <div className="awards-container">
@@ -114,7 +114,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-
+        <hr className="custom-separator" />
         <div className="sub-section">
           <h2>Recommendations</h2>
           <div class="border cs-shadow justify-content-center align-items-center rounded mt-3">

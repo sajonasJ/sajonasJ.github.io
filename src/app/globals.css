@@ -205,3 +205,12 @@ h6 {
 .cs-shadow{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.custom-separator {
+  border: 10;
+  height: 1px;
+  background-color: #979797;
+  margin: 2rem 0;
+  opacity: 1;
+  width:80%;
+}
