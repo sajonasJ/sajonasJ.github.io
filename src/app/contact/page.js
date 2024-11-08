@@ -18,7 +18,13 @@ const ContactPage = () => {
       setLoading(false);
 
       // Load additional sections in the background
-      loadAdditionalData(["projects", "experience", "education", "certifications", "about"]);
+      loadAdditionalData([
+        "projects",
+        "experience",
+        "education",
+        "certifications",
+        "about",
+      ]);
     };
 
     initializePageData();
@@ -40,38 +46,30 @@ const ContactPage = () => {
       <section className="container-fluid d-flex">
         <div className="d-flex flex-column align-items-start mt-5">
           <h2 className="my-3">Contact:</h2>
-          <p>Email: {contact.email || "N/A"}</p>
+          {Object.entries(contact).map(([key, value]) => (
+            <p key={key}>
+              {key.charAt(0).toUpperCase() + key.slice(1)}:
+              {value ? (
+                key === "email" ? (
+                  <span> {value}</span>
+                ) : (
+                  <a
+                    href={value}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ms-1"
+                  >
+                    {value}
+                  </a>
+                )
+              ) : (
+                " N/A"
+              )}
+            </p>
+          ))}
           <p>
-            LinkedIn:{" "}
-            {contact.linkedIn ? (
-              <a
-                href={contact.linkedIn}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {contact.linkedIn}
-              </a>
-            ) : (
-              "N/A"
-            )}
-          </p>
-          <p>
-            GitHub:{" "}
-            {contact.github ? (
-              <a
-                href={contact.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {contact.github}
-              </a>
-            ) : (
-              "N/A"
-            )}
-          </p>
-          <p>
-            Send a Message:{" "}
-            <button type="button" className="btn btn-primary">
+            Send a Message:
+            <button type="button" className="btn btn-primary ms-1">
               Button
             </button>
           </p>
