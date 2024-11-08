@@ -3,7 +3,8 @@
 import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
-import Loading from "@/components/loading"; // Import the Loading component
+import Image from "next/image";
+import Loading from "@/components/loading";
 import { loadInitialData, loadAdditionalData } from "@/services/dataService";
 
 const EducationPage = () => {
@@ -19,7 +20,7 @@ const EducationPage = () => {
 
       setEducation(educationData);
       setCertifications(certificationsData);
-      setLoading(false); // Stop loading after fetching initial data
+      setLoading(false);
 
       // Load additional sections in the background
       loadAdditionalData(["projects", "experience", "contact", "about"]);
@@ -33,7 +34,7 @@ const EducationPage = () => {
     return (
       <main>
         <Navigation />
-        <Loading /> {/* Display Loading component here */}
+        <Loading />
       </main>
     );
   }
@@ -43,7 +44,7 @@ const EducationPage = () => {
       <Navigation />
       <section className="container-fluid">
         <div className="d-flex w-100 flex-column">
-          <div className="container-fluid d-flex mb-4 justify-content-between">
+          <div className="container-fluid d-flex mb-2 justify-content-between">
             <h2>Tertiary Education</h2>
             <div className="btn btn-sm btn-outline-primary">Sort</div>
           </div>
@@ -58,7 +59,9 @@ const EducationPage = () => {
                   <h6>{edu.field}</h6>
                   <p>Duration: {edu.duration}</p>
                   <p>Location: {edu.location}</p>
-                  {edu.specialties && <p>Specialties: {edu.specialties.join(", ")}</p>}
+                  {edu.specialties && (
+                    <p>Specialties: {edu.specialties.join(", ")}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -66,20 +69,42 @@ const EducationPage = () => {
         </div>
 
         <div className="d-flex w-100 flex-column">
-          <div className="container-fluid d-flex mb-4">
+          <div className="container-fluid d-flex mb-2">
             <h2>Certifications</h2>
           </div>
           <div className="d-flex container-fluid flex-column mb-4">
             {certifications.map((cert, index) => (
               <div key={index} className="card w-100 mb-3">
-                <div className="card-header d-flex">
-                  <h5>{cert.name}</h5>
+                <div className="card-header d-flex align-items-center px-4 justify-content-between">
+                  <div className="d-flex">
+                    {cert.imgSrc && (
+                      <Image
+                        src={cert.imgSrc}
+                        alt={`${cert.name} Logo`}
+                        width={50}
+                        height={50}
+                        className="me-3"
+                      />
+                    )}
+                    <h5>{cert.name}</h5>
+                  </div>
+                  <h6>Issued By: {cert.issuedBy}</h6>
                 </div>
                 <div className="card-body d-flex flex-column text-start">
-                  <h6>{cert.institution}</h6>
-                  <p>Duration: {cert.duration}</p>
-                  <p>Location: {cert.location}</p>
-                  {cert.specialties && <p>Specialties: {cert.specialties.join(", ")}</p>}
+                  <p>{cert.description}</p>
+                  <p>
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="d-flex justify-content-end pe-3"
+                    >
+                      View Certification on Credly
+                    </a>
+                  </p>
+                  {cert.specialties && (
+                    <p>Specialties: {cert.specialties.join(", ")}</p>
+                  )}
                 </div>
               </div>
             ))}

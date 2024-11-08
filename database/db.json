@@ -211,9 +211,10 @@
   "certifications": [
     {
       "name": "Griffith Plus",
-      "institution": "Chinese General Hospital College of Nursing",
-      "duration": "5 years (2006 - 2011)",
-      "location": "Manila, Philippines"
+      "imgSrc": "/images/gaward2024.png",
+      "issuedBy": "Griffith University",
+      "description": "ICT PLUS is an employability-based program designed to create strong connections between university work, life experiences and future career. Earners understand the need to engage in ongoing career-development learning. Earners have completed achievable targets in the broad student-lifecycle stages. Tasks and activities for each stage are offered in curricular or extra-curricular formats. Earners of the ICT PLUS badge have some activities embedded in the degree program.",
+      "link": "https://www.credly.com/badges/715681c9-41c8-40a6-ba06-d0b303db4370/public_url"
     }
   ],
   "contact": {
@@ -243,19 +244,22 @@
         "name": "Griffith Academic Excellence 2024",
         "imgSrc": "/images/gaward2024.png",
         "issuedBy": "Griffith University",
-        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit."
+        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit.",
+        "link": "https://www.credly.com/badges/53cebe4e-4ffe-4ba3-a8ea-fcf53b0cb0af/public_url"
       },
       {
         "name": "Griffith Academic Excellence 2023",
         "imgSrc": "/images/gaward2023.png",
         "issuedBy": "Griffith University",
-        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit."
+        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit.",
+        "link": "https://www.credly.com/badges/4ae3cf76-3b0a-4494-ab7c-c9de69039796/public_url"
       },
       {
         "name": "Griffith Academic Excellence 2022",
         "imgSrc": "/images/gaward2022.png",
         "issuedBy": "Griffith University",
-        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit."
+        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit.",
+        "link": "https://www.credly.com/badges/9489f009-253c-4551-acd7-89d823190bb1/public_url"
       }
     ],
     "skills": [
