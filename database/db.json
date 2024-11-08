@@ -226,13 +226,14 @@
   "about": {
     "name": "Jonas",
     "title": "Software Development Graduate",
+    "intro": "I'm a recent graduate in Software Development from Griffith University, with a unique background as a registered nurse and over a decade of experience in the operating theatre. My passion for technology and desire to create solutions led me to pursue a career in software development. As a versatile developer, I have experience in web development (both front-end and back-end), mobile development, and software applications, and I've also explored game development. I am committed to delivering high-quality results and thrive on challenges. I am excited about new opportunities to leverage my diverse skills, contribute to innovative projects, and grow alongside my team.",
+    "objective": "My goal is to become an expert in software engineering, allowing me to apply my skills across diverse fields and scenarios. I am committed to a structured approach to growth—focusing deeply on one area until I master it, then moving on to tackle the next challenge. This step-by-step progression fuels my passion for continuous learning and enables me to build a versatile skill set for solving complex problems in various contexts.",
     "recommendations": [
       {
         "name": "Griffith University Recommendation",
         "file": "images/Recommend.pdf"
       }
     ],
-    "careerObjective": "Learn as much from all kinds of software development",
     "projectHighlights": [
       "Web Development",
       "Software Development",

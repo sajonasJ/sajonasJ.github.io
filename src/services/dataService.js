@@ -3,7 +3,6 @@
 
 export const loadInitialData = async (section) => {
   const savedData = sessionStorage.getItem(`${section}Data`);
-  console.log(`Checking sessionStorage for ${section}Data:`, savedData);
 
   if (savedData) {
     return JSON.parse(savedData);
