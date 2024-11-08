@@ -139,22 +139,23 @@ export default function Home() {
 
         <div className="sub-section">
           <h2>Recommendations</h2>
-
-          <a
-            href="/images/Recommend.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="d-flex align-items-center text-decoration-none text-reset justify-content-center mt-3 gap-1"
-          >
-            Griffith University Recommendation
-            <Image
-              src="/images/Pdf.png"
-              alt="PDF Icon"
-              width={32}
-              height={32}
-              className="me-2"
-            />
-          </a>
+          <div class="border cs-shadow justify-content-center align-items-center rounded mt-3">
+            <a
+              href="/images/Recommend.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="d-flex align-items-center text-decoration-none text-reset justify-content-center px-4 py-2 gap-1"
+            >
+              Griffith University Recommendation
+              <Image
+                src="/images/Pdf.png"
+                alt="PDF Icon"
+                width={32}
+                height={32}
+                className="me-2"
+              />
+            </a>
+          </div>
         </div>
       </section>
       <Footer />
