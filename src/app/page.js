@@ -107,10 +107,11 @@ export default function Home() {
                     className="award-badge"
                   />
                   <div>
-                  <h5 className="award-name">{award.name}</h5>
-                  <p className="award-issued-by">Issued by: {award.issuedBy}</p>
+                    <h5 className="award-name">{award.name}</h5>
+                    <p className="award-issued-by">
+                      Issued by: {award.issuedBy}
+                    </p>
                   </div>
-
                 </div>
                 <div className="text-start ps-4">
                   <p className="award-description">{award.description}</p>
@@ -122,12 +123,22 @@ export default function Home() {
 
         <div className="sub-section">
           <h2>Recommendations</h2>
-          <Image
-                    src={recommendation.imgSrc}
-                    alt={`${award.name} Badge`}
-                    width={100}
-                    height={100}
-                  />
+
+          <a
+            href="/images/Recommend.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="d-flex align-items-center justify-content-center gap-1"
+          >
+            Griffith University Recommendation
+            <Image
+              src="/images/Pdf.png"
+              alt="PDF Icon"
+              width={32}
+              height={32}
+              className="me-2"
+            />
+          </a>
         </div>
       </section>
       <Footer />
