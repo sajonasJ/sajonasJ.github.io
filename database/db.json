@@ -266,8 +266,7 @@
     "skills": [
       {
         "name": "Anaconda",
-        "imgSrc": "/images/Anaconda.png",
-        "experience": "Exposure"
+        "imgSrc": "/images/Anaconda.png"
       },
       {
         "name": "Angular",

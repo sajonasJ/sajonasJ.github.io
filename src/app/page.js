@@ -81,7 +81,7 @@ export default function Home() {
                   height={100}
                 />
                 <h6 className="py-1">{skill.name}</h6>
-                <p>{skill.experience || "Exposure"} experience</p>
+                <p>{skill.experience ? `${skill.experience} experience` : "Exposure"}</p>
               </div>
             ))}
           </div>
