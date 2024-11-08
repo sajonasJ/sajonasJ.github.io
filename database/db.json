@@ -235,6 +235,158 @@
       "Griffith Academic Excellence 2024",
       "Griffith Academic Excellence 2023",
       "Griffith Academic Excellence 2022"
+    ],
+    "skills": [
+      {
+        "name": "Anaconda",
+        "imgSrc": "/images/Anaconda.png",
+        "experience": "Exposure"
+      },
+      {
+        "name": "Angular",
+        "imgSrc": "/images/Angular.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "Apache",
+        "imgSrc": "/images/Apache.png"
+      },
+      {
+        "name": "AWS",
+        "imgSrc": "/images/AWS.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "Bootstrap",
+        "imgSrc": "/images/Bootstrap.png",
+        "experience": "3 years"
+      },
+      {
+        "name": "Confluence",
+        "imgSrc": "/images/Confluence.png"
+      },
+      {
+        "name": "C#",
+        "imgSrc": "/images/CSharp.png",
+        "experience": "6 months"
+      },
+      {
+        "name": "CSS",
+        "imgSrc": "/images/CSS.png",
+        "experience": "3 years"
+      },
+      {
+        "name": "Docker",
+        "imgSrc": "/images/Docker.png"
+      },
+      {
+        "name": "Docker Compose",
+        "imgSrc": "/images/DockerCompose.jpeg"
+      },
+      {
+        "name": "Home Assistant",
+        "imgSrc": "/images/HomeAssistant.png",
+        "experience": "6 months"
+      },
+      {
+        "name": "HTML",
+        "imgSrc": "/images/HTML.png",
+        "experience": "3 years"
+      },
+      {
+        "name": "JavaScript",
+        "imgSrc": "/images/JavaScript.png",
+        "experience": "2.5 years"
+      },
+      {
+        "name": "Jira",
+        "imgSrc": "/images/Jira.png"
+      },
+      {
+        "name": "JQuery",
+        "imgSrc": "/images/JQuery.svg"
+      },
+      {
+        "name": "Kubernetes",
+        "imgSrc": "/images/Kubernetes.svg"
+      },
+      {
+        "name": "Laravel",
+        "imgSrc": "/images/Laravel.svg"
+      },
+      {
+        "name": "Linux",
+        "imgSrc": "/images/Linux.jpg"
+      },
+      {
+        "name": "MongoDB",
+        "imgSrc": "/images/MongoDB.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "MySQL",
+        "imgSrc": "/images/MySQL.png"
+      },
+      {
+        "name": "Next.js",
+        "imgSrc": "/images/NextJS.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "Node.js",
+        "imgSrc": "/images/NodeJS.svg"
+      },
+      {
+        "name": "PHP",
+        "imgSrc": "/images/PHP.png",
+        "experience": "6 months"
+      },
+      {
+        "name": "Python",
+        "imgSrc": "/images/Python.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "React",
+        "imgSrc": "/images/React.png",
+        "experience": "2 years"
+      },
+      {
+        "name": "Redux-Saga",
+        "imgSrc": "/images/Redux-Saga.svg"
+      },
+      {
+        "name": "Redux",
+        "imgSrc": "/images/Redux.png",
+        "experience": "6 months"
+      },
+      {
+        "name": "Sass",
+        "imgSrc": "/images/Sass.png"
+      },
+      {
+        "name": "SQL",
+        "imgSrc": "/images/SQL.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "TypeScript",
+        "imgSrc": "/images/TypeScript.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "Unity",
+        "imgSrc": "/images/Unity.png"
+      },
+      {
+        "name": "VSCode",
+        "imgSrc": "/images/VSCode.png",
+        "experience": "3 years"
+      },
+      {
+        "name": "XCode",
+        "imgSrc": "/images/XCode.png"
+      }
     ]
   }
 }

@@ -1,10 +1,6 @@
 // next.config.mjs
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: ["upload.wikimedia.org"],
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;

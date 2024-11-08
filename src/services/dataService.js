@@ -1,8 +1,9 @@
 // src/services/dataService.js
 "use strict";
-// Load initial section data and save it to session storage
+
 export const loadInitialData = async (section) => {
   const savedData = sessionStorage.getItem(`${section}Data`);
+  console.log(`Checking sessionStorage for ${section}Data:`, savedData);
 
   if (savedData) {
     return JSON.parse(savedData);
@@ -10,8 +11,10 @@ export const loadInitialData = async (section) => {
     try {
       const response = await fetch(`/api/data?section=${section}`);
       if (!response.ok) throw new Error(`Failed to fetch ${section} data`);
+
       const data = await response.json();
       sessionStorage.setItem(`${section}Data`, JSON.stringify(data));
+
       return data;
     } catch (error) {
       console.error(`Error fetching ${section} data:`, error);
@@ -19,6 +22,8 @@ export const loadInitialData = async (section) => {
     }
   }
 };
+
+
 
 // Load additional sections in the background
 export const loadAdditionalData = async (sections) => {

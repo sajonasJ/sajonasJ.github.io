@@ -21,7 +21,7 @@ async function readData() {
         education: [],
         certifications: [],
         contact: {},
-        about: {}
+        about: {},
       };
     }
     throw error;
@@ -30,7 +30,11 @@ async function readData() {
 
 // Function to write data to the JSON file
 async function writeData(data) {
-  await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
+  try {
+    await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
+  } catch (error) {
+    throw new Error('Failed to write data to file');
+  }
 }
 
 // Initialize default data structure if file is missing
@@ -48,36 +52,62 @@ async function initializeDB() {
   return data;
 }
 
-// GET request to fetch a specific section (e.g., projects)
 export async function GET(request) {
+  try {
     const data = await initializeDB();
-    const section = request.nextUrl.searchParams.get("section");
-  
+    const url = new URL(request.url);
+    const section = url.searchParams.get("section"); // Manually parsing the URL
+
+    console.log("Requested section:", section); // Debugging log
+    console.log("Available data sections:", Object.keys(data)); // Debugging log
+
     if (!section || !data[section]) {
       return NextResponse.json({ error: "Invalid section" }, { status: 400 });
     }
-    
+
     return NextResponse.json(data[section]);
+  } catch (error) {
+    console.error("Error in GET request:", error.message);
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
-  
+}
+
 
 // POST request to add a new item to a specific section
 export async function POST(request) {
-  const section = request.nextUrl.searchParams.get("section") || "projects";
-  const data = await initializeDB();
-  const newItem = await request.json();
-  
-  data[section].push(newItem);
-  await writeData(data);
-  return NextResponse.json({ message: 'Item added successfully!' }, { status: 201 });
+  try {
+    const section = request.nextUrl.searchParams.get("section") || "projects";
+    const data = await initializeDB();
+
+    if (!data[section]) {
+      return NextResponse.json({ error: "Invalid section" }, { status: 400 });
+    }
+
+    const newItem = await request.json();
+    data[section].push(newItem);
+
+    await writeData(data);
+    return NextResponse.json({ message: 'Item added successfully!' }, { status: 201 });
+  } catch (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
 }
 
 // DELETE request to clear a specific section
 export async function DELETE(request) {
-  const section = request.nextUrl.searchParams.get("section") || "projects";
-  const data = await initializeDB();
-  data[section] = [];
-  
-  await writeData(data);
-  return NextResponse.json({ message: `All items in ${section} deleted!` }, { status: 200 });
+  try {
+    const section = request.nextUrl.searchParams.get("section") || "projects";
+    const data = await initializeDB();
+
+    if (!data[section]) {
+      return NextResponse.json({ error: "Invalid section" }, { status: 400 });
+    }
+
+    data[section] = [];
+    await writeData(data);
+
+    return NextResponse.json({ message: `All items in ${section} deleted!` }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
 }
