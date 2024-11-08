@@ -99,6 +99,9 @@ export default function Home() {
             <p key={index}>{award}</p>
           ))}
         </div>
+        <div className="sub-section">
+          <h2>Recommendations</h2>
+        </div>
       </section>
       <Footer />
     </main>
