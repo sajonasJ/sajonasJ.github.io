@@ -6,10 +6,12 @@ import Navigation from "@/components/navigation";
 import Loading from "@/components/loading";
 import Image from "next/image";
 import { loadInitialData, loadAdditionalData } from "@/services/dataService";
+import useLoadingTimeout from "./hooks/useLoadingTimeout";
 
 export default function Home() {
   const [about, setAbout] = useState(null);
   const [loading, setLoading] = useState(true);
+  const timeoutDone = useLoadingTimeout(200);
 
   useEffect(() => {
     const initializePageData = async () => {
@@ -30,7 +32,7 @@ export default function Home() {
     initializePageData();
   }, []);
 
-  if (loading) {
+  if (loading || !timeoutDone) {
     return (
       <main>
         <Navigation />

@@ -6,11 +6,13 @@ import Navigation from "@/components/navigation";
 import Image from "next/image";
 import Loading from "@/components/loading";
 import { loadInitialData, loadAdditionalData } from "@/services/dataService";
+import useLoadingTimeout from "../hooks/useLoadingTimeout";
 
 const EducationPage = () => {
   const [education, setEducation] = useState([]);
   const [certifications, setCertifications] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
+  const timeoutDone = useLoadingTimeout(200);
 
   useEffect(() => {
     const initializePageData = async () => {
@@ -22,15 +24,21 @@ const EducationPage = () => {
       setCertifications(certificationsData);
       setLoading(false);
 
-      // Load additional sections in the background
-      loadAdditionalData(["projects", "experience", "contact", "about"]);
+     // Load additional sections in the background
+     loadAdditionalData([
+      "projects",
+      "experience",
+      "education",
+      "certifications",
+      "about",
+    ]);
     };
 
     initializePageData();
   }, []);
 
   // Show loading component while initial data is being fetched
-  if (loading) {
+  if (loading || !timeoutDone) {
     return (
       <main>
         <Navigation />

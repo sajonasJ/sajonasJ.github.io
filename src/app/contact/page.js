@@ -5,10 +5,12 @@ import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
 import Loading from "@/components/loading";
 import { loadInitialData, loadAdditionalData } from "@/services/dataService";
+import useLoadingTimeout from "../hooks/useLoadingTimeout";
 
 const ContactPage = () => {
   const [contact, setContact] = useState({});
   const [loading, setLoading] = useState(true);
+  const timeoutDone = useLoadingTimeout(200);
 
   useEffect(() => {
     const initializePageData = async () => {
@@ -31,11 +33,12 @@ const ContactPage = () => {
   }, []);
 
   // Show loading component while initial data is being fetched
-  if (loading) {
+  if (loading || !timeoutDone) {
     return (
       <main>
         <Navigation />
         <Loading />
+        <Footer />
       </main>
     );
   }

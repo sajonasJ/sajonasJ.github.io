@@ -5,10 +5,12 @@ import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
 import Loading from "@/components/loading";
 import { loadInitialData, loadAdditionalData } from "@/services/dataService";
+import useLoadingTimeout from "../hooks/useLoadingTimeout";
 
 const ExperiencePage = () => {
   const [experience, setExperience] = useState([]);
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
+  const timeoutDone = useLoadingTimeout(200);
 
   useEffect(() => {
     const initializePageData = async () => {
@@ -18,14 +20,20 @@ const ExperiencePage = () => {
       setLoading(false); // Stop loading after fetching 'experience' data
 
       // Load additional sections in the background
-      loadAdditionalData(["projects", "education", "certifications", "contact", "about"]);
+      loadAdditionalData([
+        "projects",
+        "education",
+        "certifications",
+        "contact",
+        "about",
+      ]);
     };
 
     initializePageData();
   }, []);
 
   // Show loading component while data is being fetched
-  if (loading) {
+  if (loading || !timeoutDone) {
     return (
       <main>
         <Navigation />

@@ -3,24 +3,35 @@
 import React, { useEffect, useState } from "react";
 import Footer from "@/components/footer.jsx";
 import Navigation from "@/components/navigation";
-import Loading from "@/components/loading"; 
-import { loadInitialData } from "@/services/dataService";
+import Loading from "@/components/loading";
+import { loadInitialData, loadAdditionalData } from "@/services/dataService";
+import useLoadingTimeout from "../hooks/useLoadingTimeout";
 
 const ProjectPage = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const timeoutDone = useLoadingTimeout(200);
 
   useEffect(() => {
     const initializeProjects = async () => {
       const data = await loadInitialData("projects");
       setProjects(data || []);
       setLoading(false);
+
+      // Load additional sections in the background
+      loadAdditionalData([
+        "projects",
+        "experience",
+        "education",
+        "certifications",
+        "about",
+      ]);
     };
 
     initializeProjects();
   }, []);
 
-  if (loading) {
+  if (loading || !timeoutDone) {
     return (
       <main>
         <Navigation />
@@ -50,7 +61,8 @@ const ProjectPage = () => {
                     <h5>{project.role}</h5>
                     <p>Type: {project.type}</p>
                     <p>
-                      <strong>Tech Stack:</strong> {project.techStack.join(", ")}
+                      <strong>Tech Stack:</strong>{" "}
+                      {project.techStack.join(", ")}
                     </p>
                     {project.description.map((desc, descIndex) => (
                       <p key={descIndex}>{desc}</p>
@@ -77,7 +89,8 @@ const ProjectPage = () => {
                     <h5>{project.role}</h5>
                     <p>Type: {project.type}</p>
                     <p>
-                      <strong>Tech Stack:</strong> {project.techStack.join(", ")}
+                      <strong>Tech Stack:</strong>{" "}
+                      {project.techStack.join(", ")}
                     </p>
                     {project.description.map((desc, descIndex) => (
                       <p key={descIndex}>{desc}</p>
