@@ -14,7 +14,7 @@ To get started with the project locally, follow these steps:
 
    ```bash
    git clone https://github.com/your-username/jonas-sajonas-portfolio.git
-    ```
+   ```
 2. **Install dependencies**:
  
   Navigate into the project folder and install all necessary dependencies:
@@ -22,14 +22,13 @@ To get started with the project locally, follow these steps:
    ```bash
    npm install
    ```
-
 3. **Run the development server**:
 
   Afther the installation, you can start the Next.js development server:
 
-  ```bash
-  npm run dev
-  ```
+   ```bash
+   npm run dev
+   ```
   The site will be available at http://localhost:3000.
 
   ## License
