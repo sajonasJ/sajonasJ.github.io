@@ -1,7 +1,14 @@
 "use strict";
 import React, { useState } from "react";
 import Link from "next/link";
-import { FaHome, FaFolderOpen, FaBriefcase, FaGraduationCap, FaPhoneAlt, FaBars } from "react-icons/fa";
+import {
+  FaHome,
+  FaFolderOpen,
+  FaBriefcase,
+  FaGraduationCap,
+  FaPhoneAlt,
+  FaBars,
+} from "react-icons/fa";
 
 const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);

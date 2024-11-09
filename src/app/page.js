@@ -54,7 +54,7 @@ export default function Home() {
               <h5 className="intro-role">Registered Nurse</h5>
               </div>
             </div>
-            <div className="col-md-6 text-center text-md-start">
+            <div className="col-md-6 text-center d-flex justify-content-center">
               <p className="intro-text">{about?.intro}</p>
             </div>
           </div>
@@ -63,7 +63,9 @@ export default function Home() {
         <hr className="custom-separator" />
         <div className="sub-section">
           <h2>Career Objective</h2>
+          <div className="col-md-6 text-center px-3">
           <p>{about?.objective}</p>
+        </div>
         </div>
         <hr className="custom-separator" />
         <div className="sub-section">

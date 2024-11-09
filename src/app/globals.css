@@ -3,17 +3,18 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-  }
-}
+  } */
+/* } */
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  min-width: 430px;
 }
 
 body {
@@ -172,6 +173,7 @@ h6 {
   flex-direction: column;
   margin-top: 1rem;
   align-items: center;
+  width: 100%;
 }
 
 .award-item {
@@ -179,17 +181,20 @@ h6 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 26rem;
+  min-width: 420px;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
   background-color: #f9f9f9;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 8px;
+  max-width: 70%;
 }
 
 .award-badge {
   margin-bottom: 0.5rem;
+  width: 60px;
+  height: auto;
 }
 
 .award-name {
