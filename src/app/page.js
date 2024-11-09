@@ -44,17 +44,20 @@ export default function Home() {
     <main>
       <Navigation />
       <section className="container-fluid d-flex flex-column justify-content-around">
-        <div className="sub-section box-center px-5 flex-row">
-          <div className="container box-center flex-column">
-            <h1>Hi I&apos;m Jonas</h1>
-            <h5>Software Developer</h5>
-            <h5>&&</h5>
-            <h5>Registered Nurse</h5>
-          </div>
-          <div className="container">
-            <p>{about?.intro}</p>
-          </div>
-        </div>
+      <div className="intro-section">
+  <div className="row justify-content-center align-items-center">
+    <div className="col-md-4 text-center text-md-end mb-4 mb-md-0">
+      <h1 className="intro-title">Hi I&apos;m Jonas</h1>
+      <h5 className="intro-role">Software Developer</h5>
+      <h5 className="intro-and">&&</h5>
+      <h5 className="intro-role">Registered Nurse</h5>
+    </div>
+    <div className="col-md-6 text-center text-md-start">
+      <p className="intro-text">{about?.intro}</p>
+    </div>
+  </div>
+</div>
+
         <hr className="custom-separator" />
         <div className="sub-section">
           <h2>Career Objective</h2>

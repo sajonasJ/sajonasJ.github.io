@@ -134,12 +134,16 @@ h6 {
 
 .skillImg {
   text-align: center;
-  width: 120px;
-  height:180px;
+  width: 110px;
+  height: 180px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 8px;
   padding: 0.5rem;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .skillContainer {
@@ -152,10 +156,12 @@ h6 {
   justify-content: center;
   align-items: center;
 }
-.box-center{
+
+.box-center {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .awards-container {
@@ -173,7 +179,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-width: 40rem;
+  width: 26rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
@@ -203,7 +209,7 @@ width: 40rem;
   line-height: 1.3;
 }
 
-.cs-shadow{
+.cs-shadow {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -213,5 +219,55 @@ width: 40rem;
   background-color: #979797;
   margin: 2rem 0;
   opacity: 1;
-  width:80%;
+  width: 80%;
+}
+
+/* Main container styling for the intro section */
+.intro-section {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Styling for title and roles */
+.intro-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.intro-role,
+.intro-and {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Styling for intro text */
+.intro-text {
+  max-width: 600px;
+  line-height: 1.6;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+  .intro-section .row {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .intro-title,
+  .intro-role,
+  .intro-and {
+    text-align: right;
+  }
+
+  .intro-text {
+    text-align: left;
+    padding-left: 20px;
+  }
 }
