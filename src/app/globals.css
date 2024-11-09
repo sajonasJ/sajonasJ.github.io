@@ -271,3 +271,57 @@ h6 {
     padding-left: 20px;
   }
 }
+
+
+.navigation-container {
+  position: relative;
+}
+
+.navigation-name {
+  text-align: center;
+  flex: 1;
+}
+
+.burger-menu {
+  cursor: pointer;
+}
+.mobile-menu {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-menu .btn {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+
+.mobile-menu .btn:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.linkText {
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.linkText:hover {
+  color: #007bff; /* Change text color on hover */
+}
