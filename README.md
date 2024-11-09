@@ -15,14 +15,13 @@ To get started with the project locally, follow these steps:
    ```bash
    git clone https://github.com/your-username/jonas-sajonas-portfolio.git
     ```
-
 2. **Install dependencies**:
  
   Navigate into the project folder and install all necessary dependencies:
 
-  ```bash
-  npm install
-  ```
+   ```bash
+   npm install
+   ```
 
 3. **Run the development server**:
 
@@ -37,3 +36,7 @@ To get started with the project locally, follow these steps:
   This project is licensed under the General License. For more information, please refer to the LICENSE file in the repository.
 
   Feel free to explore the code, and get in touch if you have any questions!
+
+  Last Updated: November 2024
+
+
