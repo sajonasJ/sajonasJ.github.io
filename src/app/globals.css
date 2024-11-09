@@ -239,6 +239,14 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
+.intro-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
 .intro-role,
 .intro-and {
   font-size: 1.2rem;
@@ -251,6 +259,17 @@ h6 {
   line-height: 1.6;
   font-size: 1rem;
   padding: 0 10px;
+}
+.navigation-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation-name {
+  text-align: center;
+  flex: 1;
 }
 
 /* Responsive adjustments for larger screens */
@@ -270,21 +289,33 @@ h6 {
     text-align: left;
     padding-left: 20px;
   }
+
+  .intro-div {
+    display: block;
+  }
+  .navigation-container {
+    position: relative;
+  }
+
+  .navigation-name {
+    text-align: left;
+  }
+  .navigation-container {
+    justify-content: center; /* Center content in mobile view */
+  }
+
+  .navigation-name {
+    text-align: center;
+    flex: none; /* Remove flex property for mobile view */
+  }
 }
 
 
-.navigation-container {
-  position: relative;
-}
-
-.navigation-name {
-  text-align: center;
-  flex: 1;
-}
 
 .burger-menu {
   cursor: pointer;
 }
+
 .mobile-menu {
   background-color: white;
   padding: 10px;
@@ -309,7 +340,8 @@ h6 {
 
 
 .mobile-menu .btn:hover {
-  background-color: #f0f0f0; /* Change background color on hover */
+  background-color: #f0f0f0;
+  /* Change background color on hover */
 }
 
 .linkText {
@@ -319,9 +351,11 @@ h6 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  transition: color 0.3s ease;
+  /* Smooth transition for hover effect */
 }
 
 .linkText:hover {
-  color: #007bff; /* Change text color on hover */
+  color: #007bff;
+  /* Change text color on hover */
 }

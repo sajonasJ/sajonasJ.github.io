@@ -12,16 +12,13 @@ const Navigation = () => {
 
   return (
     <div className="navigation-container d-flex justify-content-between align-items-center px-3 py-2">
-      {/* Name Centered */}
       <h1 className="navigation-name">Jonas Sajonas</h1>
-      
-      {/* Burger Menu Icon for Mobile */}
+
       <div className="burger-menu d-md-none" onClick={toggleMenu}>
         <FaBars size={24} />
       </div>
 
-      {/* Links for Desktop and Mobile */}
-      <div className={`navigation-links d-none d-md-flex gap-3`}>
+      <div className={`navigation-links d-none d-md-flex gap-1`}>
         <Link href="/" passHref>
           <span className="btn btn-sm btn-custom">
             <FaHome /> Home

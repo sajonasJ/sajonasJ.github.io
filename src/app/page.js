@@ -44,19 +44,21 @@ export default function Home() {
     <main>
       <Navigation />
       <section className="container-fluid d-flex flex-column justify-content-around">
-      <div className="intro-section">
-  <div className="row justify-content-center align-items-center">
-    <div className="col-md-4 text-center text-md-end mb-4 mb-md-0">
-      <h1 className="intro-title">Hi I&apos;m Jonas</h1>
-      <h5 className="intro-role">Software Developer</h5>
-      <h5 className="intro-and">&&</h5>
-      <h5 className="intro-role">Registered Nurse</h5>
-    </div>
-    <div className="col-md-6 text-center text-md-start">
-      <p className="intro-text">{about?.intro}</p>
-    </div>
-  </div>
-</div>
+        <div className="intro-section">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-md-4 text-center text-md-end mb-4 mb-md-0">
+              <h1 className="intro-title">Hi I&apos;m Jonas</h1>
+              <div className="intro-div">
+              <h5 className="intro-role">Software Developer</h5>
+              <h5 className="intro-and">&&</h5>
+              <h5 className="intro-role">Registered Nurse</h5>
+              </div>
+            </div>
+            <div className="col-md-6 text-center text-md-start">
+              <p className="intro-text">{about?.intro}</p>
+            </div>
+          </div>
+        </div>
 
         <hr className="custom-separator" />
         <div className="sub-section">
@@ -84,7 +86,11 @@ export default function Home() {
                   height={100}
                 />
                 <h6 className="py-1">{skill.name}</h6>
-                <p>{skill.experience ? `${skill.experience} experience` : "Exposure"}</p>
+                <p>
+                  {skill.experience
+                    ? `${skill.experience} experience`
+                    : "Exposure"}
+                </p>
               </div>
             ))}
           </div>
