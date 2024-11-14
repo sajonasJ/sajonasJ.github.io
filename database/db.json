@@ -1,0 +1,418 @@
+{
+  "projects": [
+    {
+      "title": "Company Dashboard",
+      "category": "Professional",
+      "role": "Full-stack",
+      "type": "Web Development",
+      "techStack": [
+        "HTML5/CSS3",
+        "TypeScript",
+        "React",
+        "Redux-Saga",
+        "AWS LAMBDA",
+        "Serverless",
+        "Cognito",
+        "Jira"
+      ],
+      "description": [
+        "Developed a highly interactive React-based dashboard for administrators, enabling seamless CRUD operations on user data.",
+        "Implemented React Redux and Redux Saga for complex state management.",
+        "Optimized the dashboard for scalability and ease of use in an administrative setting.",
+        "Note: Due to company policy, this project cannot be publicly showcased."
+      ]
+    },
+    {
+      "title": "Team Yaaper Webchat Application",
+      "category": "University",
+      "role": "Full-stack",
+      "type": "Web Development",
+      "techStack": [
+        "HTML5/CSS3",
+        "TypeScript",
+        "MEAN Stack (MongoDB, Express.js, Angular, Node.js)"
+      ],
+      "description": [
+        "Developed a real-time chat application using Angular with CRUD functionalities, image upload, and administrator controls.",
+        "Used MongoDB for database management, Express.js for back-end routing, and Node.js for server-side logic.",
+        "Integrated WebSockets for real-time messaging."
+      ]
+    },
+    {
+      "title": "Peer Review University Website",
+      "category": "University",
+      "role": "Full-stack",
+      "type": "Web Development",
+      "techStack": [
+        "HTML5/CSS",
+        "PHP",
+        "Laravel",
+        "SQLite"
+      ],
+      "description": [
+        "Developed a peer review platform for university courses with user registration and CRUD functionality.",
+        "Utilized SQLite3 with Laravel for database management, routing, and authentication.",
+        "Implemented automated course creation from JSON files."
+      ]
+    },
+    {
+      "title": "Game Review Website",
+      "category": "University",
+      "role": "Full-stack",
+      "type": "Web Development",
+      "techStack": [
+        "HTML5/CSS",
+        "PHP",
+        "Laravel",
+        "MySQL"
+      ],
+      "description": [
+        "Built a game review website with CRUD functionality for game reviews.",
+        "Used SQLite3 for data management and Laravel for routing and authentication."
+      ]
+    },
+    {
+      "title": "Fake Store Mobile Application",
+      "category": "University",
+      "role": "Front-End",
+      "type": "Mobile App Development",
+      "techStack": [
+        "HTML5/CSS3",
+        "JavaScript",
+        "React-Native",
+        "Expo Go"
+      ],
+      "description": [
+        "Developed a mobile store application with CRUD functionalities for products.",
+        "Built using React Native and Expo Go for cross-platform performance on iOS and Android."
+      ]
+    },
+    {
+      "title": "Websmash Web Application",
+      "category": "University",
+      "role": "Front-End",
+      "type": "Web Development",
+      "techStack": [
+        "JavaScript",
+        "React",
+        "RESTful APIs",
+        "HTML5/CSS3"
+      ],
+      "description": [
+        "Developed a React-based web aggregator that integrates YouTube, Spotify, Pexels, and Flickr APIs to provide multimedia content."
+      ]
+    },
+    {
+      "title": "Docker / Kubernetes AWS Deployment",
+      "category": "University",
+      "role": "Back-end",
+      "type": "Web Development",
+      "techStack": [
+        "AWS EC2",
+        "Express.Js",
+        "Nginx"
+      ],
+      "description": [
+        "Deployed a web application on AWS EC2 using Docker, Docker-Compose, and Kubernetes for scalable server management.",
+        "Integrated MongoDB with a graphical interface and set up an Nginx reverse proxy."
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Cinefly",
+      "role": "Software Developer Intern",
+      "duration": "3 months (March - May)",
+      "location": "Remote",
+      "techStack": []
+    },
+    {
+      "company": "Gold Coast University Hospital (Queensland Health)",
+      "role": "Operating Theatre Nurse",
+      "duration": "3 years (2020 - 2023)",
+      "location": "Gold Coast, Queensland, Australia",
+      "specialties": [
+        "Orthopaedics",
+        "General Surgery",
+        "Obstetrics and Gynecology",
+        "Trauma"
+      ]
+    },
+    {
+      "company": "Sandringham Hospital (Alfred Health)",
+      "role": "Operating Theatre Nurse",
+      "duration": "3 years (2017 - 2020)",
+      "location": "Melbourne, Victoria, Australia",
+      "specialties": [
+        "Orthopaedics",
+        "General Surgery",
+        "Obstetrics and Gynecology",
+        "Trauma"
+      ]
+    },
+    {
+      "company": "Glenferrie Private Hospital (Ramsay Health)",
+      "role": "Operating Theatre Nurse",
+      "duration": "3 years (2016 - 2017)",
+      "location": "Melbourne, Victoria, Australia",
+      "specialties": [
+        "Orthopaedics",
+        "General Surgery",
+        "Obstetrics and Gynecology",
+        "Trauma"
+      ]
+    },
+    {
+      "company": "Makati Medical Center",
+      "role": "Operating Theatre Nurse",
+      "duration": "3 years (2012 - 2015)",
+      "location": "Makati, Metro Manila, Philippines",
+      "specialties": [
+        "Orthopaedics",
+        "General Surgery",
+        "Obstetrics and Gynecology",
+        "Trauma"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Information, Communications and Technology",
+      "field": "Software Development",
+      "institution": "Griffith University",
+      "duration": "3 Years (2022 - 2024)",
+      "location": "Gold Coast, Queensland, Australia"
+    },
+    {
+      "degree": "Bachelor of Nursing",
+      "institution": "Edith Cowan University",
+      "duration": "1 year (2015 - 2016)",
+      "location": "Perth, Western Australia, Australia",
+      "specialties": [
+        "Orthopaedics",
+        "General Surgery",
+        "Obstetrics and Gynecology",
+        "Trauma"
+      ]
+    },
+    {
+      "degree": "Bachelor of Science in Nursing",
+      "institution": "Chinese General Hospital College of Nursing",
+      "duration": "5 years (2006 - 2011)",
+      "location": "Manila, Philippines",
+      "specialties": [
+        "Orthopaedics",
+        "General Surgery",
+        "Obstetrics and Gynecology",
+        "Trauma"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Griffith Plus",
+      "imgSrc": "/images/gaward2024.png",
+      "issuedBy": "Griffith University",
+      "description": "ICT PLUS is an employability-based program designed to create strong connections between university work, life experiences and future career. Earners understand the need to engage in ongoing career-development learning. Earners have completed achievable targets in the broad student-lifecycle stages. Tasks and activities for each stage are offered in curricular or extra-curricular formats. Earners of the ICT PLUS badge have some activities embedded in the degree program.",
+      "link": "https://www.credly.com/badges/715681c9-41c8-40a6-ba06-d0b303db4370/public_url"
+    }
+  ],
+  "contact": {
+    "email": "sajonasj.work@gmail.com",
+    "linkedIn": "https://www.linkedin.com/in/sajonasj/",
+    "github": "https://github.com/sajonasJ",
+    "credly": "https://www.credly.com/users/jonas.sajonas"
+  },
+  "about": {
+    "name": "Jonas",
+    "title": "Software Development Graduate",
+    "intro": "I am a recent graduate in Software Development from Griffith University, combining my unique background as a registered nurse with over a decade of experience in the operating theatre. My passion for technology and my desire to create effective solutions inspired me to transition into a career in software development. As a versatile developer, I have experience in web development (both front-end and back-end), mobile development, and software applications, and I have also explored game development. I am committed to delivering high-quality results and thrive on challenges. I am eager to find new opportunities where I can leverage my diverse skills, contribute to innovative projects, and grow alongside my team.",
+    "objective": "My goal is to become an expert in software engineering so I can use my skills in many different areas. I believe in a structured approach to learning, focusing on one topic at a time until I master it before moving on to the next. This step-by-step method keeps me motivated to learn and helps me build a wide range of skills for solving various problems.",
+    "recommendations": [
+      {
+        "name": "Griffith University Recommendation",
+        "file": "images/Recommend.pdf"
+      }
+    ],
+    "projectHighlights": [
+      "Web Development",
+      "Software Development",
+      "Mobile Development",
+      "Game Development"
+    ],
+    "awards": [
+      {
+        "name": "Griffith Academic Excellence 2024",
+        "imgSrc": "/images/gaward2024.png",
+        "issuedBy": "Griffith University",
+        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit.",
+        "link": "https://www.credly.com/badges/53cebe4e-4ffe-4ba3-a8ea-fcf53b0cb0af/public_url"
+      },
+      {
+        "name": "Griffith Academic Excellence 2023",
+        "imgSrc": "/images/gaward2023.png",
+        "issuedBy": "Griffith University",
+        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit.",
+        "link": "https://www.credly.com/badges/4ae3cf76-3b0a-4494-ab7c-c9de69039796/public_url"
+      },
+      {
+        "name": "Griffith Academic Excellence 2022",
+        "imgSrc": "/images/gaward2022.png",
+        "issuedBy": "Griffith University",
+        "description": "Earners of the Griffith Award for Academic Excellence badge have demonstrated high levels of academic achievement. Earners are non-award, undergraduate and postgraduate students who maintain a high level of academic achievement based on the successful completion of 40CP within the academic year. This badge represents an achievement credential type that is not for credit.",
+        "link": "https://www.credly.com/badges/9489f009-253c-4551-acd7-89d823190bb1/public_url"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Anaconda",
+        "imgSrc": "/images/Anaconda.png"
+      },
+      {
+        "name": "Angular",
+        "imgSrc": "/images/Angular.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "Apache",
+        "imgSrc": "/images/Apache.png"
+      },
+      {
+        "name": "AWS",
+        "imgSrc": "/images/AWS.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "Bootstrap",
+        "imgSrc": "/images/Bootstrap.png",
+        "experience": "3 years"
+      },
+      {
+        "name": "Confluence",
+        "imgSrc": "/images/Confluence.png"
+      },
+      {
+        "name": "C#",
+        "imgSrc": "/images/CSharp.png",
+        "experience": "6 months"
+      },
+      {
+        "name": "CSS",
+        "imgSrc": "/images/CSS.png",
+        "experience": "3 years"
+      },
+      {
+        "name": "Docker",
+        "imgSrc": "/images/Docker.png"
+      },
+      {
+        "name": "Docker Compose",
+        "imgSrc": "/images/DockerCompose.jpeg"
+      },
+      {
+        "name": "Home Assistant",
+        "imgSrc": "/images/HomeAssistant.png",
+        "experience": "6 months"
+      },
+      {
+        "name": "HTML",
+        "imgSrc": "/images/HTML.png",
+        "experience": "3 years"
+      },
+      {
+        "name": "JavaScript",
+        "imgSrc": "/images/JavaScript.png",
+        "experience": "2.5 years"
+      },
+      {
+        "name": "Jira",
+        "imgSrc": "/images/Jira.png"
+      },
+      {
+        "name": "JQuery",
+        "imgSrc": "/images/JQuery.svg"
+      },
+      {
+        "name": "Kubernetes",
+        "imgSrc": "/images/Kubernetes.svg"
+      },
+      {
+        "name": "Laravel",
+        "imgSrc": "/images/Laravel.svg"
+      },
+      {
+        "name": "Linux",
+        "imgSrc": "/images/Linux.jpg"
+      },
+      {
+        "name": "MongoDB",
+        "imgSrc": "/images/MongoDB.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "MySQL",
+        "imgSrc": "/images/MySQL.png"
+      },
+      {
+        "name": "Next.js",
+        "imgSrc": "/images/NextJS.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "Node.js",
+        "imgSrc": "/images/NodeJS.svg"
+      },
+      {
+        "name": "PHP",
+        "imgSrc": "/images/PHP.png",
+        "experience": "6 months"
+      },
+      {
+        "name": "Python",
+        "imgSrc": "/images/Python.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "React",
+        "imgSrc": "/images/React.png",
+        "experience": "2 years"
+      },
+      {
+        "name": "Redux-Saga",
+        "imgSrc": "/images/Redux-Saga.svg"
+      },
+      {
+        "name": "Redux",
+        "imgSrc": "/images/Redux.png",
+        "experience": "6 months"
+      },
+      {
+        "name": "Sass",
+        "imgSrc": "/images/Sass.png"
+      },
+      {
+        "name": "SQL",
+        "imgSrc": "/images/SQL.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "TypeScript",
+        "imgSrc": "/images/TypeScript.png",
+        "experience": "1 year"
+      },
+      {
+        "name": "Unity",
+        "imgSrc": "/images/Unity.png"
+      },
+      {
+        "name": "VSCode",
+        "imgSrc": "/images/VSCode.png",
+        "experience": "3 years"
+      },
+      {
+        "name": "XCode",
+        "imgSrc": "/images/XCode.png"
+      }
+    ]
+  }
+}
