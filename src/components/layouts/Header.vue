@@ -14,8 +14,9 @@ import Navigation from "./Navigation.vue";
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-top: 15px;
+  margin-bottom:15px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 </style>
