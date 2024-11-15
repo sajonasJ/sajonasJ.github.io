@@ -35,7 +35,7 @@ provide('data', data);
 </script>
 
 <template>
-  <Main>
+  <main>
     <Header />
     <About />
     <Objective />
@@ -47,7 +47,7 @@ provide('data', data);
     <Skills/>
     <Contact />
     <Footer />
-  </Main>
+  </main>
 </template>
 
 <style scoped></style>

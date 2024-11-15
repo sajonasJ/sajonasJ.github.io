@@ -11,4 +11,6 @@ const data = inject('data');
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
