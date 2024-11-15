@@ -7,7 +7,7 @@ const data = inject('data');
 <template>
   <section id="awards" class="section-awards">
   <h1>Awards</h1>
-  <p v-if="data && data.about">{{ data.about.intro }}</p>
+  <p v-if="data && data.about">{{ data.about.awards }}</p>
   </section>
 </template>
 
