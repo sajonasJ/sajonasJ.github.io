@@ -6,11 +6,11 @@ const data = inject('data');
 
 <template>
   <section id="about" class="section-about">
-    <div class="container">
+    <div class="container1">
       <h1 class="text-right">Hi I'm Jonas</h1>
       <h3>Aspiring Software Developer</h3>
     </div>
-    <article class="container">
+    <article class="container2">
       <p v-if="data && data.about" class="intro">{{ data.about.intro }}</p>
     </article>
   </section>
@@ -23,12 +23,17 @@ const data = inject('data');
 
 }
 
-.container {
+.container1 {
   flex-direction: column;
-  width: 100%;
+  width: 45%;
   text-align: right;
 }
 
+.container2 {
+  flex-direction: column;
+  width: 55%;
+  text-align: left;
+}
 
 .intro {
   padding-right: 30px;
